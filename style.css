@@ -62,6 +62,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .input-section > h1 {
@@ -72,9 +73,13 @@ body {
 }
 
 .content > div:nth-child(odd){
-    border: 1px solid black;
+    border: 1px solid #F9FAFB;
     min-height: 14rem;
     background-color: #F9FAFB;
+}
+
+.content > div:last-child {
+    box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0.2);
 }
 
 label {
@@ -85,6 +90,15 @@ label {
 
 input {
     box-sizing: border-box;
+    border: 1px solid #E5E7EB;
+    border-radius: 2px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+input:focus {
+    border-color: skyblue;
+    box-shadow: 0 0 4px rgba(0, 0, 255, 0.5);
+    outline: none;
 }
 
 form > div {
@@ -121,7 +135,7 @@ em {
     font-size: 1rem;
 }
 
-.button-section > button {
+#create-account {
     border: none;
     border-radius: 4px;
     background-color: #596D48;
@@ -130,9 +144,23 @@ em {
     color: white;
     padding: 0.75em 1.85rem;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition: 0.4s;
+}
+
+#create-account:hover {
+    background-color: #374237;
 }
 
 .button-section > h3, a {
     margin-top: 1.5rem;
     font-size: 0.9rem;
 }
+
+#login {
+    text-decoration: none;
+    font-weight: bold;
+    color: #596D48;
+}
+
